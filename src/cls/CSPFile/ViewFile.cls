@@ -35,7 +35,9 @@ ClassMethod OnPage() As %Status
 	If $data(%fileNotExist) {
 		&html<<b>File not exist on the server</b>>
 	}
-  	do:$IsObject(%stream) %stream.OutputToDevice()
+	if $data(%stream) {
+  		do:$IsObject(%stream) %stream.OutputToDevice()
+	}
   	return $$$OK
 }
 }
