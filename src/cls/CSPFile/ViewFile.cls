@@ -1,6 +1,6 @@
 Class CSPFile.ViewFile Extends %CSP.Page
 {
-    
+
 Parameter DirDelimiter As STRING = "\";
 
 ClassMethod OnPreHTTP() As %Boolean [ ServerOnly = 1 ]
