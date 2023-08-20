@@ -38,7 +38,7 @@ ClassMethod OnPage() As %Status
 		&html<<b>File not exist on the server</b>>
 	} 
 	set %response.ContentType = "application/text"
-	id $data(%stream) {
+	if $data(%stream) {
   		do:$IsObject(%stream) %stream.OutputToDevice()
 	}
   	return $$$OK
