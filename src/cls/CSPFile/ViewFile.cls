@@ -15,11 +15,11 @@ ClassMethod OnPreHTTP() As %Boolean [ ServerOnly = 1 ]
 	  	set file = $piece(%file,..#DirDelimiter,*)
 	  	If '$$$FileDirectoryExists(directory) Set %dirNotExist=1 Return $$$OK
 	  	If '$$$FileExists(%file) Set %fileNotExist=1 Return $$$OK
-	  	set stream=##class(%Stream.FileCharacter).%New()
-	  	set sc=stream.LinkToFile(%file)
+	  	set stream = ##class(%Stream.FileCharacter).%New()
+	  	set sc = stream.LinkToFile(%file)
 	    set %stream = stream
 	    set %response.ContentType = ..#CONTENTTYPE
-	    set %response.ContentLength=stream.Size
+	    set %response.ContentLength = stream.Size
   	}
   	return $$$OK
 }
@@ -32,7 +32,7 @@ ClassMethod OnPage() As %Status
 	if $data(%dirNotExist) {
 		&html<<b>Directory not exist on the server</b>>
 	}
-	If $data(%fileNotExist) {
+	if $data(%fileNotExist) {
 		&html<<b>File not exist on the server</b>>
 	}
 	if $data(%stream) {
