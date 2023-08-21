@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Document name="CSPFileViewDownload.ZPM">
+<Module>
+ <Name>CSPFileViewDownload</Name>
+  <Version>1.0.0</Version>
+  <Description>Download and view files from server via CSP</Description>
+  <Keywords>Extension Package Manager</Keywords>
+  <Packaging>module</Packaging>
+  <SourcesRoot>src</SourcesRoot>
+  <Resource Name="CSPFile.PKG" />
+</Module>
+</Document>
+</Export>
